@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>Events</h1>
+    
+    <input type="number"
+     class="form-control"
+     style="border: 1px solid blue;
+     padding:3px; 
+     height:30px; 
+     width:100px;
+     display:block"> 
+   
+    <button class="btn btn-primary"
+     type="button"
+     style="background-color:blue;color:white;"
+     onclick="calculate()"> 
+     ADD 100
+     </button>
+    
+    
+
+     <h1>The total is: <span></span> </h1>
+
+     <script>
+
+        function calculate(){ 
+           var input=document.querySelector('.form-control');
+           var num=parseFloat(input.value); 
+           var totalValue=num+100;
+
+           document.querySelectorAll('h1')[1].querySelector('span').innerText=totalValue;
+           
+          
+        }
+     </script>
+
+
+
+   
+
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini</title>
+</head>
+<body>
+    <!-- Display a heading for the link -->
+    <h3>My link is:</h3>
+    
+    <!-- Display the link -->
+    <h2 id="lin"></h2>
+
+    <script>
+        // Prompt the user for their link
+        var lin1 = prompt('Please, provide your link');
+        if(lin1==null){
+            const errorElement = document.createElement('div');
+            errorElement.textContent = 'link not provided!';
+            errorElement.style.color = 'red';
+            document.body.appendChild(errorElement);
+        }
+        // Check if the link starts with 'http'
+        if (lin1.slice(0, 4).toLowerCase() == 'http') {
+            // If it does, display the link as is with an anchor tag
+            document.getElementById('lin').innerHTML = '<a href=' + lin1 + " '>" + lin1 + "</a>";
+        } else {
+            // If it doesn't, add 'http://' to the beginning of the link
+            var url = 'http://' + lin1;
+
+            // Display the link with an anchor tag
+            document.getElementById('lin').innerHTML = '<a href=' + url + " '>" + url + "</a>";
+        }
+    </script>
+</body>
+</html>

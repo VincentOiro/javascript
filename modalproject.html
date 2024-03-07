@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>
+        /* modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+          
+        }
+
+        /* modal content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 5px 5px black;
+        }
+
+        /* close button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModalButton">Open Modal</button>
+
+    <!-- modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" title="Close mod">&times;</span>
+            <p>
+                <h1>This is a modal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, provident expedita! Repudiandae laborum quae ratione architecto quisquam ipsum, error repellat sed qui distinctio ab. Esse mollitia praesentium hic omnis ipsam.</p>
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        // modal object class
+class Modal {
+  constructor(modalId, buttonId) {
+    this.modal = document.getElementById(modalId);
+    this.button = document.getElementById(buttonId);
+    this.button.addEventListener('click', this.openModal.bind(this));
+    this.closeButton = document.querySelector('.close');
+    this.closeButton.addEventListener('click', this.closeModal.bind(this));
+  }
+
+  openModal() {
+    this.modal.style.display = 'block';
+  }
+
+  closeModal() {
+    this.modal.style.display = 'none';
+  }
+}
+
+// create a new modal object
+const modal = new Modal('myModal', 'openModalButton');
+    </script>
+</body>
+</html>

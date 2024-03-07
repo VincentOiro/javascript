@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    <ul>
+        <li class="li"></li>
+    </ul>
+
+    <script>
+        var html=''
+       var num=parseFloat(prompt("Enter a number: "));
+      var startNum=1;
+      while(startNum<=num){
+
+        var html=html+'<li>Iteration: '+ startNum+'</li>'; 
+
+        startNum++;
+      }
+
+      document.querySelector(`.li`).innerHTML=html;
+    </script>
+
+</body>
+</html>

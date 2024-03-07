@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini</title>
+</head>
+<body>
+    <h2 id="tipp"></h2>
+
+    <script>
+        var tip = prompt('Enter the tip percentage:');
+        var amount = prompt('Enter the amount worked for:');
+
+        // Convert the input to numbers
+        tip = parseFloat(tip);
+        amount = parseFloat(amount);
+
+        // Call the tipcalc function
+        var totalAmount = tipcalc(amount, tip);
+
+        // Display the result
+        document.getElementById('tipp').innerHTML = `
+            <span>Amount worked for:Ksh </span> ${amount} <br>
+            <span>Tip due:</span> ${tip}% <br>
+            <span>Total amount due:Ksh </span> ${totalAmount}`;
+
+        function tipcalc(amount, percentage) {
+            // Validate the input
+            if (isNaN(amount) || isNaN(percentage)) {
+                return 'Invalid input';
+            }
+ 
+            // Calculate the tip amount
+            var tipAmount = (percentage / 100) * amount;
+
+            // Return the total amount
+            return amount + tipAmount;
+        }
+    </script>
+</body>
+</html>

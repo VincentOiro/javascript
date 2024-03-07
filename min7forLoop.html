@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.querySelector('body').style.color='white'
+        document.querySelector('body').style.backgroundColor='red'
+        var correct=4;
+       while( 0!=1){
+        var guess=Number(prompt('Enter your guess:'));
+        if(guess!=correct){
+           console.log('try again')
+        }else{
+            alert('correct!');
+            document.querySelector('body').style.color='blue'
+            document.querySelector('body').style.backgroundColor='green'
+            document.querySelector('body').innerHTML='<h1> YOU WIN!!</h1>'
+            
+            break;}
+       }
+
+    </script>
+</body>
+</html>

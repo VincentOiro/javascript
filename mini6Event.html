@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini</title>
+</head>
+<body>
+    <label for="">Background color</label>
+    <input type="text" class="bg">
+    <br>
+
+    <label for="">Text color</label>
+    <input type="text" class="tc">
+    <br>
+
+    <label for="">Font size</label>
+    <input type="number" class="font">
+
+
+    <script>
+      document.querySelector('.bg').addEventListener('keyup',function(event){
+        document.querySelector('body').style.backgroundColor=event.target.value;
+      })
+
+      document.querySelector('.tc').addEventListener('keyup',function(event){
+        document.querySelector('body').style.color=event.target.value;
+      })
+
+      document.querySelector('.font').addEventListener('keyup',function(event){
+        document.querySelector('body').style.fontSize=event.target.value+'px';
+      })
+
+    </script>
+
+</body>
+</html>

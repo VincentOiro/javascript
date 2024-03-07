@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <!-- Display a heading for the input -->
+    <h1>Your input was:</h1>
+    
+    <!-- Display the user's input in an h3 element -->
+    <h3 id="customInput">____________</h3>
+
+    <!-- Use JavaScript to prompt the user for their name -->
+    <script>
+        // Prompt the user for their name, with a default value of 'VinDefault'
+        var name = prompt('what is your name?', 'VinDefault');
+        
+        // Get the h3 element with the id 'customInput'
+        var h3Node = document.getElementById('customInput');
+        
+        // Set the inner text of the h3 element to the user's name in uppercase
+        h3Node.innerText = name.toUpperCase();
+    </script>
+</body>
+</html>

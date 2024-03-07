@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini</title>
+</head>
+<body>
+    <!-- Display a welcome message -->
+    <span id="eas">welcome buana</span> <br>
+   
+    <!-- Get a number input from the user using the prompt() function -->
+    <script>
+       var num= prompt('Give me a number:');
+       
+       // Convert the input to a number using the parseFloat() function
+       var input=parseFloat(num);
+       
+       // Check if the input is a valid number and greater than 18
+       if (!isNaN(input) && input>18 ) {
+            // Display a message indicating that the user can vote
+            document.getElementById('eas').innerText='You can Vote';
+       
+        }
+        // If the input is not a valid number
+        else if( isNaN(input)) {
+            // Display a message indicating that the input is invalid
+            document.getElementById('eas').innerText='Invalid input';
+        }
+
+    </script>
+</body>
+</html>

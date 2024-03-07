@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listeners</title>
+</head>
+<body>
+    <!-- Button to click -->
+    <button class="cli">Click me</button>
+    <!-- Display number of clicks -->
+    <div class="cl"></div>
+
+    <br><br> <hr>
+
+    <!-- Input field to type -->
+    <input type="text" class="input">
+
+    <!-- Display typed text -->
+    <h2 class="chan">
+        Hello <span></span>
+    </h2>
+
+    <script>
+      // Variable to store number of clicks
+      var numberOfClicks=0;
+
+      // Event listener for button click
+      document.querySelector('.cli').addEventListener('click', function(event){   
+      // Increment number of clicks
+      numberOfClicks=numberOfClicks+1;
+      // Display number of clicks
+      document.querySelector('.cl').innerText=numberOfClicks;
+      })
+
+      // Event listener for input field keyup
+      document.querySelector('.input').addEventListener( 'keyup' ,function(event){
+
+      // Display typed text
+      document.querySelector('span').innerText=event.target.value;
+     
+      })
+
+
+    </script>
+</body>
+</html> 

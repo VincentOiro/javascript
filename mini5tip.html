@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipCalculator</title>
+</head>
+<body>
+    <h1>TIP CALCULATOR</h1>
+
+    <div style="height: auto;width:95%; border:2px solid rgb(19, 17, 17); padding:5px;background-color:rgb(23, 189, 64);">
+        <label for="">Bill Amount (in Ksh)</label>
+        <input type="number" class="bill" style="border: 1px solid black;
+        width:70%;height:30px; display:inline-block; margin-bottom:15px;"> <br>
+        
+
+        <label for="" >Tip Amount (in %)</label>
+        <input type="number" class="tip" style="border: 1px solid black;
+        width:70%;height:30px; display:inline-block; margin-left: 2px;">
+
+        <button onclick="calculate();" style="background-color: blue;
+        color:white; width:30%;height:25px;margin-top:15px;">
+        Calculate Tip and Total Bill</button>
+        
+        <h2>Tip:Ksh <span></span> </h2>
+        <h2>Total:Ksh <span></span></h2>
+
+    </div>
+
+
+<script>
+    function calculate(){
+
+        var input1=parseFloat(document.querySelector('.bill').value);
+        var input2=parseFloat(document.querySelector('.tip').value);
+
+        var tipAmount=(input2/100)*input1;
+        var totalAmount=tipAmount+input1;
+
+        document.querySelectorAll('h2')[0].querySelector('span').innerText=tipAmount;
+        document.querySelectorAll('h2')[1].querySelector('span').innerText=totalAmount;
+
+    
+
+    }
+</script>
+
+
+
+</body>
+</html>

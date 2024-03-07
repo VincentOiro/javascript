@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeCss</title>
+</head>
+<body>
+    <label for="">Background color</label>
+    <input type="text" class="bg" style="padding:10px">
+    <br>
+
+    <label for="">Text color</label>
+    <input type="text" class="tc" style="padding:10px">
+
+
+
+
+    <script>
+     document.querySelector('.bg').addEventListener('keyup',function(event){
+        document.querySelector('body').style.backgroundColor=event.target.value;
+     })
+
+     document.querySelector('.tc').addEventListener('keyup',function(event){
+        document.querySelector('body').style.color=event.target.value;
+     })
+
+    </script>
+</body>
+</html>
